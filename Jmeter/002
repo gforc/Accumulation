@@ -36,7 +36,8 @@ JMeter内置了一些基本函数变量，可以直接引用
  JMeter内置函数列表
 
 
-|函数类型	|函数名称	|注释
+|函数类型	|函数名称	|注释|
+| ------- | --------|--------------------|
 |Information|	threadNum	  |get thread number|
 |Information	 |machineName	 |get the local machine name|
 |Information|	time	|return current time in various formats|
