@@ -1,5 +1,5 @@
-#FreeRadius
-##安装FreeRadius
+# FreeRadius
+## 安装FreeRadius
 
 以CentOS7 安装为例
 
@@ -26,7 +26,7 @@ yum install WPA_supplicant
 ```
  
 
-##添加raidus client
+## 添加raidus client
 此处的client指的是与Radius server联动的设备，例如AP。
 
 ```
@@ -44,7 +44,7 @@ client utopia_juniper_firewall {
 }
 ```
 
-##添加Radius server认证用户
+## 添加Radius server认证用户
 在/etc/raddb/users文件中添加需要认证的用户信息
 
 ```
@@ -54,7 +54,7 @@ utopia  Cleartext-Password := "123456"
         Reply-Message := "Hello, it is from evan's radius server!"
 ```
 
-##使用eapol_test进行测试
+## 使用eapol_test进行测试
 注意：配置文件中的字符区分大小写
 
 - peap-gtp
@@ -188,7 +188,7 @@ eapol_test -c /evan/testFreeRadius/peap-gtp.cfg -s testing123
 ```
  
 
-##关闭防火墙 或是 iptables
+## 关闭防火墙 或是 iptables
 
 ```
 [root@localhost ~]# systemctl stop firewalld.service            //停止firewall
@@ -206,7 +206,7 @@ listening on ens192, link-type EN10MB (Ethernet), capture size 262144 bytes.
 02:04:32.476576 IP 172.21.119.63.51886 > localhost.localdomain.radius: RADIUS, Access-Request (1), id: 0x80 length: 169
 02:04:32.476629 IP localhost.localdomain > 172.21.119.63: ICMP host localhost.localdomain unreachable - admin prohibited, length 205
 ```
-##调试
+## 调试
 1. 关闭radiusd server，通过 radius -X启动radius（radius debug mode），然后在尝试连接radius服务器，此时会打印出详细log。  
 ```
 systemctl stop radiusd
@@ -221,7 +221,7 @@ tcpdump -i [interface] host [APipaddress]
 cat /var/log/radius/radiusd.log
 ```
 
-##证书
+## 证书
 - andriod证书： client证书，只支持.p12格式的；CAroot证书没有要求. 
 
 - 修改证书路径:
@@ -278,7 +278,7 @@ make server.csr
 详细操作查看帮助文档，/etc/raddb/certs/README
 
 
-##Note
+## Note
 - 每次修改完配置文件，最后重启服务systemctl restart radiusd。
 - 如果systemctl start radiusd失败，通过radiusd -X查看失败log。
 - 通过证书进行认证：首先，注意证书是否在有效期内；其次，注意设备的时间是否在证书的有效期内。
