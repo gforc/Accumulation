@@ -18,7 +18,7 @@
  
 ## jmeter中的八种元件(componment)，我们所有的case操作步骤基本都是由这八种元件组成。
  
-### 取样器/采样器（Sampler）
+### 取样器/采样器（Sampler）  
        取样器（Sampler）是性能测试中向服务器发送请求，记录响应信息，记录响应时间的最小单元，JMeter 原生支持多种不同的sampler ，如 HTTP Request Sampler 、 FTP  Request Sample 、TCP  Request Sample 、JDBC Request Sampler 等，每一种不同类型的 sampler 可以根据设置的参数向服务器发出不同类型的请求。
 
 ### 逻辑控制器（Logic Controller）
@@ -59,11 +59,11 @@
 
 ## 元件的执行顺序
  
-了解了元件有作用域之后，来看看元件的执行顺序，元件执行顺序的规则很简单，在同一作用域名范围内，测试计划中的元件按照如下顺序执行。
-（1）配置元件（config elements ）
-（2）前置处理程序（Per-processors）
-（3）定时器（timers ）
-（4）取样器（Sampler）
-（5）后置处理程序（Post-processors） （除非Sampler 得到的返回结果为空）。
-（6）断言（Assertions）（除非Sampler 得到的返回结果为空）。
-（7）监听器（Listeners）（除非Sampler 得到的返回结果为空）。
+了解了元件有作用域之后，来看看元件的执行顺序，元件执行顺序的规则很简单，在同一作用域名范围内，测试计划中的元件按照如下顺序执行。  
+（1）配置元件（config elements ）  
+（2）前置处理程序（Per-processors）  
+（3）定时器（timers ）  
+（4）取样器（Sampler）  
+（5）后置处理程序（Post-processors） （除非Sampler 得到的返回结果为空）。  
+（6）断言（Assertions）（除非Sampler 得到的返回结果为空）。  
+（7）监听器（Listeners）（除非Sampler 得到的返回结果为空）。  
