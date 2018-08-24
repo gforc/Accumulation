@@ -1,10 +1,10 @@
-#NTP server
+# NTP server
 ## 安装 ntp 
 ```
 yum install ntp
 ```
 
-##修改配置文件
+## 修改配置文件
 
 ```
 [root@localhost etc]# vi /etc/ntp.conf
@@ -30,7 +30,7 @@ systemctl enable ntpd
 systemctl start ntpd
 ```
 
-##测试
+## 测试
 在ntp client 同步时间
 
 ```
