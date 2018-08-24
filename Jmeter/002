@@ -36,16 +36,18 @@ JMeter内置了一些基本函数变量，可以直接引用
  JMeter内置函数列表
 
 
-|函数类型	|函数名称	|注释|
+|函数类型 	|函数名称 |注释|
 | ------- | --------|--------------------|
-|Information|	threadNum	  |get thread number|
-|Information	 |machineName	 |get the local machine name|
-|Information|	time	|return current time in various formats|
-|Information|	log	 |log (or display) a message (and return the value)|
-|Information|	logn|	log (or display) a message (empty return value)|
-|Input|	StringFromFile|	read a line from a file|
-|Input|	FileToString|	read an entire file|
-|Input|	CSVRead|	read from CSV delimited file|
+|Information|	threadNum |get thread number|
+|Information	 |machineName |get the local machine name|
+|Information|	time |return current time in various formats|
+|Information| log |log (or display) a message (and return the value)|
+|Information| logn| log (or display) a message (empty return value)|
+|Input|	StringFromFile| read a line from a file|
+|Input|	FileToString| read an entire file|
+|Input|	CSVRead| read from CSV delimited file|
+
+
 Input	XPath	Use an XPath expression to read from a file
 Calculation	counter	generate an incrementing number
 Calculation	intSum	add int numbers
